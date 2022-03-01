@@ -1,10 +1,10 @@
 import { configure } from "@testing-library/react";
-import categoryReducer from '../Store/categorySlice';
+import categorySlice from "./categorySlice.js"
 
 
 export const store = configure({
   reducer: {
-    category: categoryReducer,
+    category: categorySlice,
   },
   middleware: (getDefaultMiddleware) =>
   getDefaultMiddleware({

@@ -1,14 +1,17 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
+import { Provider } from 'react-redux';
+import createReduxStore from './Store/index.js';
+import CategoryList from './components/CategoryList/CategoryList.jsx';
 
 function App() {
   return (
-    <div>
-
-      <Header />
-      <Footer />
-
-    </div>
+    <Provider store={createReduxStore()}>
+      <div className="App">
+        <header className="App-header">
+          <h1>Store Front</h1>
+          <CategoryList />
+        </header>
+      </div>
+    </Provider>
   );
 }
 
